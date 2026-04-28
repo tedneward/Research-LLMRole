@@ -10,6 +10,7 @@ assistant_roles = [
 general_prompts = [
     "Why is the sky blue?",
     "What is 2 + 2?",
+    "Who is the king of France?"
 ]
 
 def run_experiment(prompt):
