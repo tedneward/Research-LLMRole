@@ -11,8 +11,8 @@ assistant_roles = [
 
 general_prompts = [
 #    "Why is the sky blue?",
-    "What is 2 + 2?",
-    "Who is the king of France?"
+#    "What is 2 + 2?",
+    "Who is the king of France?",
     # Test logic and reasoning
     "If all A are B and some B are C, are some A definitely C?",
     # False premise/hallucination check
@@ -40,7 +40,7 @@ def run_experiment(prompt):
                                             {"role": "system", "content": role_text},
                                             {"role": "user", "content": prompt},
                                         ])
-                f.write(response.message.content)
+                f.write(response.message.content + "\n\n")
                 f.write("\n\n---\n\n")
                 f.flush()
                 print(f"Time check: {datetime.datetime.now()}, run {run + 1} completed.")
